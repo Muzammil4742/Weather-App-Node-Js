@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Result</title>
+</head>
+<body>
+  <% if (error) { %>
+    <h2 style="color:red"><%= error %></h2>
+    <a href="/">Try Again</a>
+  <% } else { %>
+    <h1>Weather in <%= city %>, <%= country %> on <%= date %></h1>
+    <p>Condition: <%= condition %></p>
+    <p>Temperature: <%= temp %> °C</p>
+    <img src="<%= icon %>" alt="Weather icon" />
+    <br><a href="/">Search Again</a>
+  <% } %>
+</body>
+</html>
